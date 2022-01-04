@@ -16,11 +16,13 @@ class CategoriesGridView extends StatelessWidget {
       child: GridView.builder(
         padding: const EdgeInsets.all(10),
         itemCount: categories.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
+          childAspectRatio: (MediaQuery.of(context).size.width / 1.5) /
+              (MediaQuery.of(context).size.height / 2),
         ),
+        shrinkWrap: true,
         itemBuilder: (context, i) => CategoryTile(category: categories[i]),
       ),
     );

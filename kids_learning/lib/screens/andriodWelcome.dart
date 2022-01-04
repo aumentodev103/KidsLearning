@@ -147,7 +147,7 @@ class WelcomeScreen extends StatelessWidget {
                       child: ElevatedButton.icon(
                         onPressed: () {
                           Navigator.of(context)
-                              .pushNamed(AndriodCategoriesScreen.routeName);
+                              .pushNamed(AndCategoriesScreen.routeName);
                         },
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(

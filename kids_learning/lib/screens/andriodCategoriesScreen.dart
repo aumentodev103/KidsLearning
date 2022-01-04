@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:kids_learning/Providers/ProviderCategories.dart';
 import 'package:kids_learning/widgets/categoriesGridView.dart';
-import 'package:kids_learning/widgets/categoryTile.dart';
-import 'package:provider/provider.dart';
 
-class AndriodCategoriesScreen extends StatelessWidget {
+class AndCategoriesScreen extends StatelessWidget {
   static const routeName = "/all-categories";
-  const AndriodCategoriesScreen({Key? key}) : super(key: key);
+  const AndCategoriesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +26,11 @@ class AndriodCategoriesScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        "Choose what",
+                        "Choose what to learn today?",
+                        softWrap: true,
                         style: TextStyle(
-                          fontSize: 26,
+                          fontSize: 24,
                           fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        "to learn today?",
-                        style: TextStyle(
-                          fontSize: 26,
                         ),
                       ),
                     ],
@@ -64,17 +56,17 @@ class AndriodCategoriesScreen extends StatelessWidget {
                         fillColor: Color.fromRGBO(211, 211, 211, 1),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(50),
+                            Radius.circular(25),
                           ),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(50),
+                            Radius.circular(25),
                           ),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(50),
+                            Radius.circular(25),
                           ),
                         )),
                   ),

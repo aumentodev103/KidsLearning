@@ -2272,6 +2272,11 @@ class CategoriesProvider with ChangeNotifier {
     print(allCategories.length);
     return [...allCategories];
   }
+
+  categoryDetails(String id) {
+    print(allCategories.firstWhere((element) => element.id == id));
+    return allCategories.firstWhere((element) => element.id == id);
+  }
 }
 
 class Category with ChangeNotifier {

@@ -6,6 +6,7 @@ import 'package:kids_learning/screens/andriodCategoriesScreen.dart';
 import 'dart:io';
 
 import 'package:kids_learning/screens/andriodWelcome.dart';
+import 'package:kids_learning/screens/androidCategoryDetailsScreen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -35,13 +36,25 @@ class EntryPageAndriod extends StatelessWidget {
             ).copyWith(
               secondary: Colors.green,
             ),
+            textTheme: const TextTheme(
+                headline1: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                ),
+                headline4: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                )),
             fontFamily: "Opensans",
             primarySwatch: Colors.blue,
           ),
           home: const WelcomeScreen(),
           initialRoute: "/",
           routes: {
-            AndriodCategoriesScreen.routeName: (_) => AndriodCategoriesScreen(),
+            AndCategoriesScreen.routeName: (_) => const AndCategoriesScreen(),
+            AndCategoryDetailsScreen.routeName: (_) =>
+                AndCategoryDetailsScreen(),
           }),
     );
   }

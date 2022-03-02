@@ -1,9 +1,7 @@
-import 'dart:io' show Platform;
-
 import 'package:flutter/material.dart';
 import 'package:kids_learning/Providers/ProviderCategories.dart';
 import 'package:kids_learning/screens/andriodCategoriesScreen.dart';
-import 'dart:io';
+// import 'dart:io';
 
 import 'package:kids_learning/screens/andriodWelcome.dart';
 import 'package:kids_learning/screens/androidCategoryDetailsScreen.dart';
@@ -30,6 +28,7 @@ class EntryPageAndriod extends StatelessWidget {
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Kids Learning',
+          themeMode: ThemeMode.light,
           theme: ThemeData(
             colorScheme: ColorScheme.fromSwatch(
               primarySwatch: Colors.blue,
@@ -54,7 +53,7 @@ class EntryPageAndriod extends StatelessWidget {
           routes: {
             AndCategoriesScreen.routeName: (_) => const AndCategoriesScreen(),
             AndCategoryDetailsScreen.routeName: (_) =>
-                AndCategoryDetailsScreen(),
+                const AndCategoryDetailsScreen(),
           }),
     );
   }
